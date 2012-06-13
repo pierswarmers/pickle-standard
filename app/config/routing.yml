@@ -7,4 +7,3 @@ PickleBlogBundle:
     resource: "Pickle\Bundle\BlogBundle\Controller\BlogController"
     type:     annotation
     prefix:   /
-
