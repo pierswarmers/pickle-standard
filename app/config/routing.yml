@@ -2,3 +2,9 @@
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #    prefix:   /_internal
+
+PickleBlogBundle:
+    resource: "Pickle\Bundle\BlogBundle\Controller\BlogController"
+    type:     annotation
+    prefix:   /
+
