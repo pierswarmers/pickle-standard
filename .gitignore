@@ -17,3 +17,6 @@ app/config/parameters.yml
 
 # Tools
 composer.phar
+
+# Coverage
+coverage/*

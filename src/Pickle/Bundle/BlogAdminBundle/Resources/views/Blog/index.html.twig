@@ -1,0 +1,48 @@
+{% extends '::admin.html.twig' %}
+
+{% block content_header %}<i class="icon-bullhorn"></i> Blog listing{% endblock content_header %}
+
+{% block body %}
+
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('admin_blog_show', { 'id': entity.id }) }}">{{ entity.title }}</a></td>
+            <td><time datetime="{{ entity.createdAt|date('c') }}">{{ entity.createdAt|date('F j, Y') }}</time></td>
+            <td><time datetime="{{ entity.updatedAt|date('c') }}">{{ entity.updatedAt|date('F j, Y') }}</time></td>
+            <td>{{ entity.status }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('admin_blog_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admin_blog_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_blog_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+
+{% endblock body %}

@@ -1,0 +1,22 @@
+{% extends '::admin.html.twig' %}
+
+{% block content_header %}<i class="icon-bullhorn"></i> Blog creation{% endblock content_header %}
+
+{% block body %}
+
+<form action="{{ path('admin_blog_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('admin_blog') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+
+{% endblock body %}

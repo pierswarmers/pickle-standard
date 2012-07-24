@@ -1,0 +1,11 @@
+#
+# This file is part of the Pickle Sandbox Bundle.
+#
+#
+
+pickle_blog_frontend_post:
+    resource: @PickleBlogBundle/Resources/config/routing/frontend/post.xml
+
+pickle_blog_backend_post:
+    prefix:   /admin/posts
+    resource: @PickleBlogBundle/Resources/config/routing/backend/post.xml

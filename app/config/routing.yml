@@ -1,9 +1,28 @@
-# Internal routing configuration to handle ESI
-#_internal:
-#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
-#    prefix:   /_internal
 
-PickleBlogBundle:
-    resource: "Pickle\Bundle\BlogBundle\Controller\BlogController"
-    type:     annotation
-    prefix:   /
+pickle_sandbox_blog:
+    resource: @SandboxBlogBundle/Resources/config/routing.yml
+
+
+#PickleBlogAdminBundle:
+#    resource: "@PickleBlogAdminBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+#
+#PickleAdminBundle:
+#    resource: "@PickleAdminBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+#
+#
+#PickleBlogBundle:
+#    resource: "Pickle\Bundle\BlogBundle\Controller\BlogController"
+#    type:     annotation
+#    prefix:   /
+#
+#homepage:
+#    pattern:  /
+#    defaults: { _controller: PickleBlogBundle:Blog:index }
+#
+#blog_list:
+#    pattern:  /
+#    defaults: { _controller: PickleBlogBundle:Blog:index }
