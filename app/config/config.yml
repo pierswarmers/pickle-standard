@@ -14,9 +14,9 @@ framework:
     default_locale:  %locale%
     session: ~
 
-pickle_admin:
-    components_dashboard: ~
-    components_menu:      [ blah, boo ]
+#pickle_admin:
+#    components_dashboard: ~
+#    components_menu:      [ blah, boo ]
 
 pickle_blog:
     driver: doctrine/orm
